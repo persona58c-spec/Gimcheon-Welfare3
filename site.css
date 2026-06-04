@@ -195,9 +195,10 @@ footer a:hover { color: #fff; text-decoration: underline; }
 
 /* 인사말 */
 .greeting { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 48px; align-items: center; }
-.greeting .portrait { background: linear-gradient(160deg,#eaf1f9,#f1f0ec); border: 1px solid var(--line); border-radius: var(--radius); aspect-ratio: 3/4; display: flex; align-items: stretch; overflow: hidden; padding: 0; }
-.greeting .portrait #presidentPhoto { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; border-radius: var(--radius); }
-.greeting .portrait img[src="logo-mark.png"] { height: 96px; width: auto; margin-bottom: 16px; }
+.greeting .portrait { background: linear-gradient(160deg,#eaf1f9,#f1f0ec); border: 1px solid var(--line); border-radius: var(--radius); aspect-ratio: 3/4; position: relative; overflow: hidden; padding: 0; display: block; }
+.greeting .portrait #presidentPhoto { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.greeting .portrait #presidentFallback { position: absolute; inset: 0; }
+.greeting .portrait #presidentFallback img { height: 96px; width: auto; margin-bottom: 16px; }
 .greeting .sign { margin-top: 24px; font-weight: 800; color: var(--navy); }
 .greeting .sign span { display:block; font-weight: 600; color: var(--ink-soft); font-size: calc(15px * var(--fs)); margin-bottom: 4px; }
 
